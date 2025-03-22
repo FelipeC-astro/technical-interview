@@ -1,0 +1,6 @@
+customer_id,total_amount_spent,average_purchase_value,number_of_purchases,most_frequent_category
+CUST_062,2102.22,110.64,19,Home & Garden
+CUST_090,2040.24,102.01,20,Electronics
+CUST_099,2000.9,111.16,18,Sports
+CUST_092,1779.33,93.65,19,Clothing
+CUST_033,1775.29,98.63,18,Books
