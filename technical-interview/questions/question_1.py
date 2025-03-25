@@ -61,9 +61,8 @@ print(sales_data.describe(include='all'))
 missing_price_before = sales_data['price'].isnull().sum()
 missing_category_before = sales_data['category'].isnull().sum()
 
-# Fill missing values in 'price' column with the mean
-price_mean = sales_data['price'].mean()
-sales_data['price'].fillna(price_mean, inplace=True)
+# Fill missing values in 'price' column with the mean per category
+sales_data['price'] = sales_data.groupby('category')['price'].transform(lambda x: x.fillna(x.mean()))
 
 # Fill missing values in 'category' column with the mode
 category_mode = sales_data['category'].mode()[0]
